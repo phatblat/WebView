@@ -3,6 +3,7 @@
 *.xccheckout
 *.xcscmblueprint
 .DS_Store
+.build/
 .classpath
 .gradle/
 .idea/
