@@ -39,6 +39,8 @@ endif
 
 RUN_RESOURCES_DIRECTORY = ${EXECUTABLE_DIRECTORY}
 
+xcproj:
+	swift package generate-xcodeproj
 
 build: copyRunResources
 	swift build $(SWIFTC_FLAGS) $(LINKER_FLAGS)
@@ -77,5 +79,4 @@ ifeq ($(UNAME), Linux)
 	  make && make install
 endif
 
-
-.PHONY: build test distclean init run copyRunResources copyTestResources
+.PHONY: build test distclean init run copyRunResources copyTestResources xcproj
