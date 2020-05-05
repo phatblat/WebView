@@ -1,7 +1,7 @@
 import XCTest
 @testable import SwiftUI_WebView
 
-final class SwiftUI_WebViewTests: XCTestCase {
+final class WebViewTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
