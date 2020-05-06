@@ -46,7 +46,7 @@ build: copyRunResources
 	swift build $(SWIFTC_FLAGS) $(LINKER_FLAGS)
 
 test: build copyTestResources
-	swift test
+	swift test --enable-test-discovery
 
 copyRunResources:
 	mkdir -p ${RUN_RESOURCES_DIRECTORY}
