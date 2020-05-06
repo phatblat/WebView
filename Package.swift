@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUI.WebView",
+    name: "WebView",
     platforms: [
       .iOS(.v13), .watchOS(.v6), .tvOS(.v13), .macOS(.v10_15)
     ],
     products: [
         .library(
-            name: "SwiftUI.WebView",
-            targets: ["SwiftUI.WebView"]),
+            name: "WebView",
+            targets: ["WebView"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "SwiftUI.WebView",
+            name: "WebView",
             dependencies: []),
         .testTarget(
-            name: "SwiftUI.WebViewTests",
-            dependencies: ["SwiftUI.WebView"]),
+            name: "WebViewTests",
+            dependencies: ["WebView"]),
     ]
 )

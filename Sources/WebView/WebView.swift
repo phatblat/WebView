@@ -2,12 +2,12 @@ import WebKit
 import SwiftUI
 import Combine
 
-/// A container for using a WKWebView in SwiftUI
+/// WKWebView wrapped in a SwiftUI View.
 public struct WebView: View {
     /// The WKWebView to display
     public let webView: WKWebView
 
-    public init(webView: WKWebView) {
+    public init(webView: WKWebView = .init()) {
         self.webView = webView
     }
 }

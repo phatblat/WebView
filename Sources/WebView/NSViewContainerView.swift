@@ -1,6 +1,6 @@
 //
 //  NSViewContainerView.swift
-//  SwiftUI.WebView
+//  WebView
 //
 //  Created by Ben Chatelain on 5/5/20.
 //
