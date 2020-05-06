@@ -22,9 +22,8 @@ extension WebView: UIViewRepresentable {
     }
 
     public func updateUIView(_ view: WebView.UIViewType, context: UIViewRepresentableContext<WebView>) {
-        // If its the same content view we don't need to update.
-        if uiView.contentView !== webView {
-            uiView.contentView = webView
+        if view.contentView !== webView {
+            view.contentView = webView
         }
     }
 }
