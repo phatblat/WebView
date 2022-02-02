@@ -61,6 +61,8 @@ run: build
 
 clean:
 	swift package clean
+	rm -rf .build/
+	rm -rf .swifpm/
 
 distclean:
 	rm -rf Packages
