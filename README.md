@@ -1,6 +1,6 @@
 # WebView
 
-`WKWebView` wrapped in a SwiftUI View. Works on all Apple platforms.
+Simple SwiftUI wrapper for `WKWebView`.
 
 ## Requirements
 
@@ -8,8 +8,6 @@
 - Swift 5.2
 - iOS 13.0
 - macOS 10.15.0
-- watchOS 6.0
-- tvOS 13.0
 
 ## 📄 License
 
