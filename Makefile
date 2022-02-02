@@ -39,14 +39,11 @@ endif
 
 RUN_RESOURCES_DIRECTORY = ${EXECUTABLE_DIRECTORY}
 
-xcproj:
-	swift package generate-xcodeproj
-
 build: copyRunResources
 	swift build $(SWIFTC_FLAGS) $(LINKER_FLAGS)
 
 test: build copyTestResources
-	swift test --enable-test-discovery
+	swift test
 
 copyRunResources:
 	mkdir -p ${RUN_RESOURCES_DIRECTORY}
@@ -61,6 +58,8 @@ run: build
 
 clean:
 	swift package clean
+	rm -rf .build/
+	rm -rf .swifpm/
 
 distclean:
 	rm -rf Packages
