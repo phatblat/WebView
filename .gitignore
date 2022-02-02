@@ -10,6 +10,7 @@
 .project
 .rubygems/
 .settings
+.swiftpm/
 .vscode/
 Carthage/
 Pods/
