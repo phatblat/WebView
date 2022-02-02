@@ -39,9 +39,6 @@ endif
 
 RUN_RESOURCES_DIRECTORY = ${EXECUTABLE_DIRECTORY}
 
-xcproj:
-	swift package generate-xcodeproj
-
 build: copyRunResources
 	swift build $(SWIFTC_FLAGS) $(LINKER_FLAGS)
 
