@@ -68,6 +68,6 @@ extension WebViewStore {
     private func scrollTo(_ YOffset: Int) {
         let script = "window.scrollTo(0, \(YOffset));"
         let scrollScript = WKUserScript(source: script, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-        self.webView.configuration.userContentController.addUserScript(scrollScript)
+        webView.configuration.userContentController.addUserScript(scrollScript)
     }
 }

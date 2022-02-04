@@ -12,7 +12,7 @@ public struct WebView: View {
     }
 }
 
-#if !os(macOS)
+#if os(iOS)
 // MARK: - UIViewRepresentable
 extension WebView: UIViewRepresentable {
     public typealias UIViewType = UIViewContainerView<WKWebView>
