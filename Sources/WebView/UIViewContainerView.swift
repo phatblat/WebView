@@ -1,5 +1,3 @@
-import SwiftUI
-
 #if !os(macOS)
 import UIKit
 
