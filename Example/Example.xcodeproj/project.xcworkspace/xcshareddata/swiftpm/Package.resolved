@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "WebView",
+        "repositoryURL": "https://github.com/phatblat/WebView",
+        "state": {
+          "branch": null,
+          "revision": "f41d4b73c19bdb4b0227fd43b2d464d6c2e8d64e",
+          "version": "0.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

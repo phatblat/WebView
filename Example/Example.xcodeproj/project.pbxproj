@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8311D3227ACD1AD0073691F /* WebViewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8311D3127ACD1AD0073691F /* WebViewAppApp.swift */; };
+		F8311D3227ACD1AD0073691F /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8311D3127ACD1AD0073691F /* ExampleApp.swift */; };
 		F8311D3427ACD1AD0073691F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8311D3327ACD1AD0073691F /* ContentView.swift */; };
 		F8311D3627ACD1AF0073691F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8311D3527ACD1AF0073691F /* Assets.xcassets */; };
 		F8311D3927ACD1AF0073691F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8311D3827ACD1AF0073691F /* Preview Assets.xcassets */; };
 		F8311D4327ACD2B50073691F /* WebView in Frameworks */ = {isa = PBXBuildFile; productRef = F8311D4227ACD2B50073691F /* WebView */; };
+		F8311D4727AD8A2C0073691F /* WebView in Frameworks */ = {isa = PBXBuildFile; productRef = F8311D4627AD8A2C0073691F /* WebView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8311D2E27ACD1AD0073691F /* WebViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8311D3127ACD1AD0073691F /* WebViewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppApp.swift; sourceTree = "<group>"; };
+		F8311D2E27ACD1AD0073691F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8311D3127ACD1AD0073691F /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		F8311D3327ACD1AD0073691F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8311D3527ACD1AF0073691F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8311D3827ACD1AF0073691F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F8311D4027ACD1EC0073691F /* WebView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WebView; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8311D4727AD8A2C0073691F /* WebView in Frameworks */,
 				F8311D4327ACD2B50073691F /* WebView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				F8311D3F27ACD1EC0073691F /* Packages */,
-				F8311D3027ACD1AD0073691F /* WebViewApp */,
+				F8311D3027ACD1AD0073691F /* Example */,
 				F8311D2F27ACD1AD0073691F /* Products */,
 				F8311D4127ACD2B50073691F /* Frameworks */,
 			);
@@ -48,20 +49,20 @@
 		F8311D2F27ACD1AD0073691F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8311D2E27ACD1AD0073691F /* WebViewApp.app */,
+				F8311D2E27ACD1AD0073691F /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8311D3027ACD1AD0073691F /* WebViewApp */ = {
+		F8311D3027ACD1AD0073691F /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				F8311D3127ACD1AD0073691F /* WebViewAppApp.swift */,
+				F8311D3127ACD1AD0073691F /* ExampleApp.swift */,
 				F8311D3327ACD1AD0073691F /* ContentView.swift */,
 				F8311D3527ACD1AF0073691F /* Assets.xcassets */,
 				F8311D3727ACD1AF0073691F /* Preview Content */,
 			);
-			path = WebViewApp;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		F8311D3727ACD1AF0073691F /* Preview Content */ = {
@@ -75,7 +76,6 @@
 		F8311D3F27ACD1EC0073691F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				F8311D4027ACD1EC0073691F /* WebView */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8311D2D27ACD1AD0073691F /* WebViewApp */ = {
+		F8311D2D27ACD1AD0073691F /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8311D3C27ACD1AF0073691F /* Build configuration list for PBXNativeTarget "WebViewApp" */;
+			buildConfigurationList = F8311D3C27ACD1AF0073691F /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				F8311D2A27ACD1AD0073691F /* Sources */,
 				F8311D2B27ACD1AD0073691F /* Frameworks */,
@@ -102,12 +102,13 @@
 			);
 			dependencies = (
 			);
-			name = WebViewApp;
+			name = Example;
 			packageProductDependencies = (
 				F8311D4227ACD2B50073691F /* WebView */,
+				F8311D4627AD8A2C0073691F /* WebView */,
 			);
 			productName = WebViewApp;
-			productReference = F8311D2E27ACD1AD0073691F /* WebViewApp.app */;
+			productReference = F8311D2E27ACD1AD0073691F /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8311D2927ACD1AD0073691F /* Build configuration list for PBXProject "WebViewApp" */;
+			buildConfigurationList = F8311D2927ACD1AD0073691F /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,11 +135,14 @@
 				Base,
 			);
 			mainGroup = F8311D2527ACD1AD0073691F;
+			packageReferences = (
+				F8311D4527AD8A2C0073691F /* XCRemoteSwiftPackageReference "WebView" */,
+			);
 			productRefGroup = F8311D2F27ACD1AD0073691F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8311D2D27ACD1AD0073691F /* WebViewApp */,
+				F8311D2D27ACD1AD0073691F /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -161,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8311D3427ACD1AD0073691F /* ContentView.swift in Sources */,
-				F8311D3227ACD1AD0073691F /* WebViewAppApp.swift in Sources */,
+				F8311D3227ACD1AD0073691F /* ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +295,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WebViewApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"$(PROJECT_NAME)/Preview Content\"";
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -320,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WebViewApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"$(PROJECT_NAME)/Preview Content\"";
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -345,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8311D2927ACD1AD0073691F /* Build configuration list for PBXProject "WebViewApp" */ = {
+		F8311D2927ACD1AD0073691F /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8311D3A27ACD1AF0073691F /* Debug */,
@@ -354,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8311D3C27ACD1AF0073691F /* Build configuration list for PBXNativeTarget "WebViewApp" */ = {
+		F8311D3C27ACD1AF0073691F /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8311D3D27ACD1AF0073691F /* Debug */,
@@ -365,9 +369,25 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		F8311D4527AD8A2C0073691F /* XCRemoteSwiftPackageReference "WebView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/phatblat/WebView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		F8311D4227ACD2B50073691F /* WebView */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = WebView;
+		};
+		F8311D4627AD8A2C0073691F /* WebView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8311D4527AD8A2C0073691F /* XCRemoteSwiftPackageReference "WebView" */;
 			productName = WebView;
 		};
 /* End XCSwiftPackageProductDependency section */

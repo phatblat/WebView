@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  WebViewApp
+//  WebView
 //
 //  Created by Ben Chatelain on 2/3/22.
 //
