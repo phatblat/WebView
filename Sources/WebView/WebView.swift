@@ -12,29 +12,24 @@ public struct WebView: View {
     }
 }
 
-#if os(iOS)
 // MARK: - UIViewRepresentable
+#if os(iOS)
 extension WebView: UIViewRepresentable {
     public func makeUIView(context: UIViewRepresentableContext<WebView>) -> WKWebView {
         webView
     }
 
-    public func updateUIView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {
-        
-    }
+    public func updateUIView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {}
 }
 #endif
 
-#if os(macOS)
 // MARK: - NSViewRepresentable
+#if os(macOS)
 extension WebView: NSViewRepresentable {
-    public typealias NSViewType = NSViewContainerView<WKWebView>
-
     public func makeNSView(context: NSViewRepresentableContext<WebView>) -> WKWebView {
         webView
     }
 
-    public func updateNSView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {
-    }
+    public func updateNSView(_ view: WKWebView, context: NSViewRepresentableContext<WebView>) {}
 }
 #endif
