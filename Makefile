@@ -1,81 +1,45 @@
 #
 # Makefile
-# Makefile-swift
+# WebView
 #
-# https://github.com/phatblat/Makefile-swift
 
-SHELL = /bin/sh
+EXAMPLE_PROJECT = WebViewApp
 
-# trunk
-# SWIFT_VERSION = swift-DEVELOPMENT-SNAPSHOT-2020-04-23-a
+################################################################################
+#
+# Targets
+#
 
-# Swift 5.3
-# SWIFT_VERSION = swift-5.3-DEVELOPMENT-SNAPSHOT-2020-04-21-a
+.DEFAULT_GOAL := help
 
-SWIFT_VERSION = 5.2.2
+.PHONY: help
+help: MAKEFILE_FMT = "  \033[36m%-25s\033[0m%s\n"
+help: ## (default) Displays this message
+	@echo "Ditto main Makefile."
+	@echo ""
+	@echo "Targets:"
+	@grep -E '^[a-zA-Z0-9_-]*:.*?##' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?##"}; {printf $(MAKEFILE_FMT), $$1, $$2}'
+	@echo ""
+	@echo "Parameters:"
+	@grep -E '^[A-Z0-9_-]* ?\?=.*?##' $(MAKEFILE_LIST) | awk 'BEGIN {FS = " ?\\?=.*?##"}; {printf $(MAKEFILE_FMT), $$1, $$2}'
+: # Hacky way to display a newline ##
 
-# set EXECUTABLE_DIRECTORY according to your specific environment
-# run swift build and see where the output executable is created
-
-# OS specific differences
-UNAME = ${shell uname}
-
-ifeq ($(UNAME), Darwin)
-SWIFTC_FLAGS =
-LINKER_FLAGS = -Xlinker -L/usr/local/lib
-PLATFORM = x86_64-apple-macosx
-EXECUTABLE_DIRECTORY = ./.build/${PLATFORM}/debug
-TEST_BUNDLE = CHANGEMEPackageTests.xctest
-TEST_RESOURCES_DIRECTORY = ./.build/${PLATFORM}/debug/${TEST_BUNDLE}/Contents/Resources
-endif
-ifeq ($(UNAME), Linux)
-SWIFTC_FLAGS = -Xcc -fblocks
-LINKER_FLAGS = -Xlinker -rpath -Xlinker .build/debug
-PATH_TO_SWIFT = /home/vagrant/swiftenv/versions/$(SWIFT_VERSION)
-PLATFORM = x86_64-unknown-linux
-EXECUTABLE_DIRECTORY = ./.build/${PLATFORM}/debug
-TEST_RESOURCES_DIRECTORY = ${EXECUTABLE_DIRECTORY}
-endif
-
-RUN_RESOURCES_DIRECTORY = ${EXECUTABLE_DIRECTORY}
-
-build: copyRunResources
+.PHONY: build
+build: ## Build package
 	swift build $(SWIFTC_FLAGS) $(LINKER_FLAGS)
 
-test: build copyTestResources
+.PHONY: test
+test: build ## Test package
 	swift test
 
-copyRunResources:
-	mkdir -p ${RUN_RESOURCES_DIRECTORY}
-	cp -r Resources/* ${RUN_RESOURCES_DIRECTORY}
-
-copyTestResources:
-	mkdir -p ${TEST_RESOURCES_DIRECTORY}
-	cp -r Resources/* ${TEST_RESOURCES_DIRECTORY}
-
-run: build
-	${EXECUTABLE_DIRECTORY}/ResourceHandlingSample
-
-clean:
+.PHONY: clean
+clean: ## Clean build folders
 	swift package clean
 	rm -rf .build/
 	rm -rf .swifpm/
-
-distclean:
 	rm -rf Packages
-	swift package clean
 
-init:
-	- swiftenv install $(SWIFT_VERSION)
-	swiftenv local $(SWIFT_VERSION)
-ifeq ($(UNAME), Linux)
-	cd /vagrant && \
-	  git clone --recursive -b experimental/foundation https://github.com/apple/swift-corelibs-libdispatch.git && \
-	  cd swift-corelibs-libdispatch && \
-	  sh ./autogen.sh && \
-	  ./configure --with-swift-toolchain=/home/vagrant/swiftenv/versions/$(SWIFT_VERSION)/usr \
-	    --prefix=/home/vagrant/swiftenv/versions/$(SWIFT_VERSION)/usr && \
-	  make && make install
-endif
-
-.PHONY: build test distclean init run copyRunResources copyTestResources xcproj
+.PHONY: resolve
+resolve: ## Resolves SwiftPM package dependencies for example app
+	# cd $(EXAMPLE_PROJECT)
+	xcodebuild -resolvePackageDependencies
