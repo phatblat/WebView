@@ -27,6 +27,11 @@ public class WebViewStore: ObservableObject {
         setupObservers()
     }
 
+    /// Enables KeyPath access to wrapped WKWebView properties.
+    public subscript<T>(keyPath: KeyPath<WKWebView, T>) -> T {
+        webView[keyPath: keyPath]
+    }
+
     deinit {
         observers.forEach {
             // Not even sure if this is required?
