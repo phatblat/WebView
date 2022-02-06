@@ -15,16 +15,12 @@ public struct WebView: View {
 #if os(iOS)
 // MARK: - UIViewRepresentable
 extension WebView: UIViewRepresentable {
-    public typealias UIViewType = UIViewContainerView<WKWebView>
-
-    public func makeUIView(context: UIViewRepresentableContext<WebView>) -> WebView.UIViewType {
-        return UIViewContainerView()
+    public func makeUIView(context: UIViewRepresentableContext<WebView>) -> WKWebView {
+        webView
     }
 
-    public func updateUIView(_ view: WebView.UIViewType, context: UIViewRepresentableContext<WebView>) {
-        if view.contentView !== webView {
-            view.contentView = webView
-        }
+    public func updateUIView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {
+        
     }
 }
 #endif
@@ -34,14 +30,11 @@ extension WebView: UIViewRepresentable {
 extension WebView: NSViewRepresentable {
     public typealias NSViewType = NSViewContainerView<WKWebView>
 
-    public func makeNSView(context: Context) -> WebView.NSViewType {
-        return NSViewContainerView()
+    public func makeNSView(context: NSViewRepresentableContext<WebView>) -> WKWebView {
+        webView
     }
 
-    public func updateNSView(_ view: WebView.NSViewType, context: Context) {
-        if view.contentView !== webView {
-            view.contentView = webView
-        }
+    public func updateNSView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {
     }
 }
 #endif
